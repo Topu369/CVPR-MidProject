@@ -1,0 +1,28 @@
+
+RESULTS SUMMARY: Orange fruit quality classification (5 classes, 15000 images)
+Split: 10500 train / 2250 validation / 2250 test (stratified 70/15/15)
+
+Round 1, CNN_Basic (3 conv blocks, no augmentation/BN/dropout):
+  test accuracy 99.33%, macro F1 0.9933;
+  final train-val accuracy gap 2.5 percentage points.
+Round 2, CNN_Improved (4 conv blocks + BatchNorm + dropout + augmentation):
+  test accuracy 99.11%, macro F1 0.9911;
+  final train-val accuracy gap -1.2 percentage points.
+Change in test accuracy: -0.22 percentage points.
+
+Final model per-class accuracy: best = green_orange (100.0%),
+worst = cankered_orange (97.3%).
+Most frequent confusion: cankered_orange predicted as blackspotted_orange (11 images).
+
+
+                     precision    recall  f1-score   support
+
+blackspotted_orange     0.9760    0.9933    0.9846       450
+    cankered_orange     0.9932    0.9733    0.9832       450
+       fresh_orange     0.9955    0.9911    0.9933       450
+       green_orange     1.0000    1.0000    1.0000       450
+      rotten_orange     0.9912    0.9978    0.9945       450
+
+           accuracy                         0.9911      2250
+          macro avg     0.9912    0.9911    0.9911      2250
+       weighted avg     0.9912    0.9911    0.9911      2250
