@@ -1,4 +1,4 @@
-## 12. Discussion and conclusion
+## Discussion and conclusion
 
 ### 1. Round 1: a large dataset limits overfitting
 The basic CNN has **8,483,397 parameters** (99% of them in its first fully-connected layer) and is trained on **10,500 images** with no augmentation, BatchNorm or dropout. It overfits only **mildly**:
